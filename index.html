@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Taari Scribbles</title>
+    <link rel="shortcut icon" type="image/png" href="https://taarimalta.github.io/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://taarimalta.github.io/favicon.ico">
+    <link href="https://taarimalta.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Taari Scribbles Full Atom Feed" />
+    <link rel="stylesheet" href="https://taarimalta.github.io/theme/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="https://taarimalta.github.io/theme/css/pygments.css" type="text/css" />
+    <meta name="generator" content="Pelican" />
+    <meta name="description" content="" />
+    <meta name="author" content="Taari Malta" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="selected"><a href="https://taarimalta.github.io/">Home</a></li>
+            </ul>
+        </nav>
+        <div class="header_box">
+            <h1><a href="https://taarimalta.github.io/">Taari Scribbles</a></h1>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">            <h4 class="date">Oct 14, 2020</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="https://taarimalta.github.io/happy-dashain-in-turtle.html" rel="bookmark" title="Permanent Link to &quot;Happy Dashain in Turtle&quot;">Happy Dashain in Turtle</a>
+                </h2>
+
+                
+                
+
+                <p>Draw this Happy Dashain and Tihar Spiral using the code that follows</p>
+<p><img alt="Happy Dashain and Tihar Spiral" src="../images/spiral.png"></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span> <span class="k">as</span> <span class="nn">t</span>
+
+<span class="c1"># This gives more control of speed t.tracer(refreshes, delay)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">tracer</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Arial&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;normal&quot;</span><span class="p">))</span>
+
+<span class="n">t</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span><span class="o">.</span><span class="n">bgcolor</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">angle</span> <span class="o">=</span> <span class="mi">45</span>
+<span class="n">text</span><span class="o">=</span><span class="s2">&quot;HAPPYDASHAINTIHAR&quot;</span>
+<span class="n">length</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;violet&quot;</span><span class="p">,</span><span class="s2">&quot;indigo&quot;</span><span class="p">,</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span><span class="s2">&quot;green&quot;</span><span class="p">,</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span><span class="s2">&quot;red&quot;</span><span class="p">]</span>
+
+<span class="n">turtles</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+  <span class="n">look_at</span> <span class="o">=</span> <span class="mi">360</span><span class="o">/</span><span class="n">N</span><span class="o">*</span><span class="n">position</span>
+  <span class="n">color_position</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">position</span><span class="o">%</span><span class="nb">len</span><span class="p">(</span><span class="n">colors</span><span class="p">)]</span>
+  <span class="n">new</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+  <span class="n">new</span><span class="o">.</span><span class="n">setheading</span><span class="p">(</span><span class="n">look_at</span><span class="p">)</span>
+  <span class="n">new</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="n">color_position</span><span class="p">)</span>
+  <span class="n">new</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
+
+  <span class="n">turtles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">radius</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">):</span>
+  <span class="n">character</span><span class="o">=</span><span class="n">text</span><span class="p">[</span><span class="n">radius</span> <span class="o">%</span> <span class="n">length</span><span class="p">]</span>
+
+  <span class="k">for</span> <span class="n">my</span> <span class="ow">in</span> <span class="n">turtles</span><span class="p">:</span>
+    <span class="n">my</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">radius</span><span class="o">**</span><span class="mf">1.9</span><span class="p">,</span> <span class="n">angle</span><span class="p">)</span>
+    <span class="n">my</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">character</span><span class="p">,</span><span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Arial&quot;</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="s2">&quot;normal&quot;</span><span class="p">))</span>
+</pre></div>
+</td></tr></table>
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="https://taarimalta.github.io/happy-dashain-in-turtle.html">posted at 23:25</a>
+                    &nbsp;&middot;&nbsp;<a href="https://taarimalta.github.io/category/turtle.html" rel="tag">Turtle</a>
+                </div>
+            </article>
+
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+                &middot;
+                <a href="https://taarimalta.github.io/feeds/all.atom.xml" rel="alternate">Atom Feed</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>
