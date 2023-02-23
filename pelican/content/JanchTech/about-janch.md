@@ -1,6 +1,6 @@
 Title: Janch
 Date: 2023-02-23 22:01
-Category: Tools
+Category: JanchTech
 
 
 Do you find it difficult to keep track of all the potential issues that could affect your software product? It's easy to get overwhelmed by the sheer number of things that could go wrong, from web service outages to low disk space and excessive error logging.

@@ -32,4 +32,4 @@ DEFAULT_PAGINATION = False
 #RELATIVE_URLS = True
 
 
-THEME = "blue-penguin"
+THEME = "blue-penguin-dark"
